@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.18)
 project(qwt VERSION 5.2.1)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
+#set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
@@ -96,92 +96,94 @@ set(SOURCES
     src/qwt_wheel.cpp)
 
 set(HEADERS
-    src/qwt_abstract_scale_draw.h
-    src/qwt_abstract_scale.h
-    src/qwt_abstract_slider.h
-    src/qwt_analog_clock.h
-    src/qwt_array.h
-    src/qwt_arrow_button.h
-    src/qwt_clipper.h
-    src/qwt_color_map.h
-    src/qwt_compass_rose.h
-    src/qwt_compass.h
-    src/qwt_counter.h
-    src/qwt_curve_fitter.h
-    src/qwt_data.h
-    src/qwt_dial_needle.h
-    src/qwt_dial.h
-    src/qwt_double_interval.h
-    src/qwt_double_range.h
-    src/qwt_double_rect.h
-    src/qwt_dyngrid_layout.h
-    src/qwt_event_pattern.h
-    src/qwt_global.h
-    src/qwt_interval_data.h
-    src/qwt_knob.h
-    src/qwt_layout_metrics.h
-    src/qwt_legend_item.h
-    src/qwt_legend_itemmanager.h
-    src/qwt_legend.h
-    src/qwt_magnifier.h
-    src/qwt_math.h
-    src/qwt_painter.h
-    src/qwt_panner.h
-    src/qwt_picker_machine.h
-    src/qwt_picker.h
-    src/qwt_plot_canvas.h
-    src/qwt_plot_curve.h
-    src/qwt_plot_dict.h
-    src/qwt_plot_grid.h
-    src/qwt_plot_item.h
-    src/qwt_plot_layout.h
-    src/qwt_plot_magnifier.h
-    src/qwt_plot_marker.h
-    src/qwt_plot_panner.h
-    src/qwt_plot_picker.h
-    src/qwt_plot_printfilter.h
-    src/qwt_plot_rasteritem.h
-    src/qwt_plot_rescaler.h
-    src/qwt_plot_scaleitem.h
-    src/qwt_plot_spectrogram.h
-    src/qwt_plot_svgitem.h
-    src/qwt_plot_zoomer.h
-    src/qwt_plot.h
-    src/qwt_polygon.h
-    src/qwt_raster_data.h
-    src/qwt_round_scale_draw.h
-    src/qwt_scale_div.h
-    src/qwt_scale_draw.h
-    src/qwt_scale_engine.h
-    src/qwt_scale_map.h
-    src/qwt_scale_widget.h
-    src/qwt_slider.h
-    src/qwt_spline.h
-    src/qwt_symbol.h
-    src/qwt_text_engine.h
-    src/qwt_text_label.h
-    src/qwt_text.h
-    src/qwt_thermo.h
-    src/qwt_valuelist.h
-    src/qwt_wheel.h
-    src/qwt.h)
+    include/qwt_abstract_scale_draw.h
+    include/qwt_abstract_scale.h
+    include/qwt_abstract_slider.h
+    include/qwt_analog_clock.h
+    include/qwt_array.h
+    include/qwt_arrow_button.h
+    include/qwt_clipper.h
+    include/qwt_color_map.h
+    include/qwt_compass_rose.h
+    include/qwt_compass.h
+    include/qwt_counter.h
+    include/qwt_curve_fitter.h
+    include/qwt_data.h
+    include/qwt_dial_needle.h
+    include/qwt_dial.h
+    include/qwt_double_interval.h
+    include/qwt_double_range.h
+    include/qwt_double_rect.h
+    include/qwt_dyngrid_layout.h
+    include/qwt_event_pattern.h
+    include/qwt_global.h
+    include/qwt_interval_data.h
+    include/qwt_knob.h
+    include/qwt_layout_metrics.h
+    include/qwt_legend_item.h
+    include/qwt_legend_itemmanager.h
+    include/qwt_legend.h
+    include/qwt_magnifier.h
+    include/qwt_math.h
+    include/qwt_painter.h
+    include/qwt_panner.h
+    include/qwt_picker_machine.h
+    include/qwt_picker.h
+    include/qwt_plot_canvas.h
+    include/qwt_plot_curve.h
+    include/qwt_plot_dict.h
+    include/qwt_plot_grid.h
+    include/qwt_plot_item.h
+    include/qwt_plot_layout.h
+    include/qwt_plot_magnifier.h
+    include/qwt_plot_marker.h
+    include/qwt_plot_panner.h
+    include/qwt_plot_picker.h
+    include/qwt_plot_printfilter.h
+    include/qwt_plot_rasteritem.h
+    include/qwt_plot_rescaler.h
+    include/qwt_plot_scaleitem.h
+    include/qwt_plot_spectrogram.h
+    include/qwt_plot_svgitem.h
+    include/qwt_plot_zoomer.h
+    include/qwt_plot.h
+    include/qwt_polygon.h
+    include/qwt_raster_data.h
+    include/qwt_round_scale_draw.h
+    include/qwt_scale_div.h
+    include/qwt_scale_draw.h
+    include/qwt_scale_engine.h
+    include/qwt_scale_map.h
+    include/qwt_scale_widget.h
+    include/qwt_slider.h
+    include/qwt_spline.h
+    include/qwt_symbol.h
+    include/qwt_text_engine.h
+    include/qwt_text_label.h
+    include/qwt_text.h
+    include/qwt_thermo.h
+    include/qwt_valuelist.h
+    include/qwt_wheel.h
+    include/qwt.h)
 
 if (MSVC)
-    add_definitions(-DQWT_MAKEDLL=1)
     add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 endif ()
 
-add_library(qwt_static STATIC ${SOURCES})
+add_library(qwt_static STATIC ${SOURCES} ${HEADERS})
 if (MSVC AND BUILD_SHARED_LIBS)
+    add_definitions(-DQWT_MAKEDLL=1)
     set_target_properties(qwt_static PROPERTIES OUTPUT_NAME "qwt_static")
 else ()
     set_target_properties(qwt_static PROPERTIES OUTPUT_NAME "qwt")
 endif ()
+target_include_directories(qwt_static PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(qwt_static PUBLIC Qt${V}::Core Qt${V}::Svg Qt${V}::Widgets)
 
 if (BUILD_SHARED_LIBS)
     add_library(qwt_shared SHARED $<TARGET_OBJECTS:qwt_static>)
     set_target_properties(qwt_shared PROPERTIES OUTPUT_NAME "qwt")
+    target_include_directories(qwt_shared PRIVATE ${PROJECT_SOURCE_DIR}/include)
     target_link_libraries(qwt_shared PUBLIC Qt${V}::Core Qt${V}::Svg Qt${V}::Widgets)
 endif ()
 
