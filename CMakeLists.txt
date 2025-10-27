@@ -187,12 +187,15 @@ if (BUILD_SHARED_LIBS)
     target_link_libraries(qwt_shared PUBLIC Qt${V}::Core Qt${V}::Svg Qt${V}::Widgets)
 endif ()
 
-include(GNUInstallDirs)
-install(TARGETS qwt_static
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
-if (BUILD_SHARED_LIBS)
-    install(TARGETS qwt_shared
+# if this project is not configured as a subproject
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    include(GNUInstallDirs)
+    install(TARGETS qwt_static
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    if (BUILD_SHARED_LIBS)
+        install(TARGETS qwt_shared
+            LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    endif ()
+    install(FILES ${HEADERS}
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/qwt)
 endif ()
-install(FILES ${HEADERS}
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/qwt)
